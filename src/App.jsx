@@ -24,7 +24,7 @@ const App = () => {
         </Routes>
         <div>
       <Button text="Submit" onClick={handleClick} />
-      <Button text="Cancel" onClick={() => alert('Canceled!')}  />
+      <Button text="Cancel" onClick={() => alert('Canceled')}  />
     </div>
       </div>
     </Router>
