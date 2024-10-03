@@ -17,7 +17,7 @@ const App = () => {
           <Route
             path="/about"
             element={
-              <Suspense fallback={<div>Loading About Page...</div>}>
+              <Suspense fallback={<div>Loading About Page.</div>}>
                 <AboutPage />
               </Suspense>
             }
