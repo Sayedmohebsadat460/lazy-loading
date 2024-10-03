@@ -2,6 +2,7 @@ import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import HomePage from './components/HomePage';
 import Button from './useble';
+import Accordion from "./components/accordion/Accordion.js";
 const AboutPage = lazy(() => import('./components/AboutPage'));
 
 const App = () => {
@@ -16,7 +17,7 @@ const App = () => {
           <Route
             path="/about"
             element={
-              <Suspense fallback={<div>Loading About Page...</div>}>
+              <Suspense fallback={<div>Loading About Page.</div>}>
                 <AboutPage />
               </Suspense>
             }
@@ -25,7 +26,8 @@ const App = () => {
         <div>
       <Button text="Submit" onClick={handleClick} />
       <Button text="Cancel" onClick={() => alert('Canceled')}  />
-    </div>
+      <Accordion title="Products" content="This is new product" />
+      <br />    </div>
       </div>
     </Router>
   );
